@@ -98,8 +98,7 @@ Open `client/index.html` in a browser or serve it using any static server.
 
 ## 👤 Author
 
-**Arnab Das**  
+**Arnab Das**  Cybersecurity Enthusiast | Web Security & Red Team Research  
 **Koushal Singh** 
-Cybersecurity Enthusiast | Web Security & Red Team Research  
 
 > *Secure code is not optional — it’s essential.*
