@@ -1,69 +1,104 @@
-# 🛡️ RiskyURL – Web Security Analysis Tool
+# 🛡️ RiskyURL – Web Security Misconfiguration Scanner
 
 ## 📌 Overview
 
-**RiskyURL** is a cybersecurity-focused project designed to help **developers and security learners identify common web application security issues** caused by insecure coding practices or misconfigurations.
+**RiskyURL** is a cybersecurity project designed to help **developers identify common web application security mistakes** and insecure configurations early in the development process.
 
-It performs automated checks for frequently exploited vulnerabilities, allowing developers to detect and fix issues early in the development lifecycle.
-
----
-
-## 🚀 Features
-
-- Error-based SQL Injection detection  
-- Boolean-based SQL Injection detection  
-- Time-based SQL Injection detection  
-- Union-based SQL Injection detection  
-- Reflected XSS detection  
-- Stored XSS detection  
-- DOM-based XSS detection  
-- CSRF vulnerability checks  
-- Security header analysis  
-- SSL/TLS configuration checks  
-- Directory fuzzing for exposed paths  
-- 📄 **Downloadable security report**
+It performs automated checks for frequently exploited vulnerabilities such as SQL injection, XSS, CSRF, insecure headers, SSL/TLS issues, and exposed directories, and generates a **downloadable security report** for review.
 
 ---
 
-## 📂 How It Works
+## ✨ Features
 
-RiskyURL analyzes a target URL by sending controlled test payloads and inspecting responses to identify potential security weaknesses.  
-The results are compiled into a **structured security report** that can be downloaded for further review or documentation.
+### 🔍 Vulnerability Checks
+- Error-based SQL Injection  
+- Boolean-based SQL Injection  
+- Time-based SQL Injection  
+- Union-based SQL Injection  
+- Reflected XSS  
+- Stored XSS  
+- DOM-based XSS  
+- CSRF checks  
 
----
+### 🛠️ Security Analysis
+- HTTP security header analysis  
+- SSL/TLS configuration validation  
+- Directory fuzzing for exposed endpoints  
 
-## 📄 Report Generation
-
-After the scan completes, RiskyURL allows users to **download a detailed report** containing:
-- Identified vulnerabilities
-- Affected endpoints
-- Severity indicators
-- Security recommendations
-
-This report can be used for **debugging, audits, or security improvement tracking**.
-
----
-
-## 🎯 Purpose
-
-- Help developers catch **basic security mistakes**
-- Improve secure coding awareness
-- Demonstrate real-world web vulnerability patterns
-- Serve as an educational cybersecurity PoC
+### 📄 Reporting
+- Automatically generated scan results  
+- **Downloadable security report (PDF)**  
+- Clear overview of detected issues for developers  
 
 ---
 
-## ⚠️ Disclaimer
+## 📂 Project Structure
 
-> This tool is intended strictly for **educational and defensive security testing**.  
-> Only scan applications you own or have explicit permission to test.  
-> The author is not responsible for misuse of this tool.
+```
+riskyurl/
+├── client/
+│   ├── index.html
+│   ├── script.js
+│   └── styles.css
+├── server/
+│   ├── main.py
+│   ├── script/
+│   ├── reports/
+│   ├── pyproject.toml
+│   └── .python-version
+├── .gitignore
+└── README.md
+```
+
+> ⚠️ Generated files such as virtual environments, build artifacts, videos, and reports are intentionally excluded from the repository.
+
+---
+
+## 🚀 How It Works
+
+RiskyURL sends controlled test requests to a target URL and analyzes responses for indicators of insecure behavior or misconfiguration.
+
+Once the scan is complete:
+1. Detected issues are categorized
+2. Results are compiled into a structured format
+3. A **downloadable report** is generated for auditing and remediation purposes
+
+---
+
+## 🧑‍💻 Running the Project Locally
+
+### Backend
+```bash
+cd server
+python main.py
+```
+
+### Frontend
+Open `client/index.html` in a browser or serve it using any static server.
+
+---
+
+## 🎯 Use Cases
+
+- Catch **basic security errors** during development  
+- Learn how common web vulnerabilities are identified  
+- Demonstrate secure coding awareness  
+- Educational and portfolio-ready cybersecurity project  
+
+---
+
+## ⚠️ Ethical Use & Disclaimer
+
+> **DISCLAIMER:**  
+> This project is intended strictly for **educational and defensive security testing**.  
+> Only test applications you own or have explicit permission to test.  
+> The author is not responsible for misuse or illegal use of this tool.
 
 ---
 
 ## 👤 Author
 
 **Arnab Das**  
-Cybersecurity Enthusiast | Web Security Researcher
+Cybersecurity Enthusiast | Web Security & Red Team Research  
 
-> *Secure code is not optional — it’s mandatory.*
+> *Secure code is not optional — it’s essential.*
