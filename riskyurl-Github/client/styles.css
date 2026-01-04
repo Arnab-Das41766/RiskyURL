@@ -1,0 +1,326 @@
+/* Background video */
+.backvideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.3) saturate(1.5);
+}
+
+/* Footer */
+.footer-section {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-top: 1px solid #00ffcc;
+  padding: 1.5rem 0;
+  margin-top: auto;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Share Tech Mono', monospace;
+  color: #888;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.github-link,
+.license-link {
+  color: #00ffcc;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.github-link:hover,
+.license-link:hover {
+  color: #fff;
+  text-shadow: 0 0 5px #00ffcc;
+}
+
+.badge {
+  background: rgba(0, 255, 204, 0.1);
+  color: #00ffcc;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  border: 1px solid rgba(0, 255, 204, 0.3);
+}
+
+.separator {
+  color: #444;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  font-family: 'Orbitron', sans-serif;
+  overflow-x: hidden;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  margin-top: 2vh;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #00ffcc;
+  text-shadow: 0 0 8px #00ffcc;
+  animation: fade 3s infinite ease-in-out;
+}
+
+#url-input {
+  padding: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: 2px solid #0ff;
+  border-radius: 8px;
+  background-color: #000;
+  color: #0ff;
+  font-family: 'Share Tech Mono', monospace;
+  width: 60%;
+  max-width: 400px;
+  box-shadow: 0 0 10px #00ffff88;
+  outline: none;
+  margin-top: 1rem;
+}
+
+#check-button {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  background-color: #00ffcc;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffcc88;
+  transition: background-color 0.3s ease;
+}
+
+#check-button:hover {
+  background-color: #00ddb3;
+  box-shadow: 0 0 20px #00ffcc;
+}
+
+/* Info Section */
+.info-section {
+  text-align: center;
+  color: white;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+  margin: 0.5rem auto;
+}
+
+.highlighted-text {
+  color: #00ffcc;
+  text-shadow: 0 0 5px #00ffcc;
+}
+
+/* Download Button */
+#report-download-wrapper {
+  margin: 3rem auto;
+  text-align: center;
+}
+
+#download-report-button {
+  font-family: 'Orbitron', sans-serif;
+  background: transparent;
+  color: #00ffcc;
+  border: 2px solid #00ffcc;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.1);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#download-report-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #00ffcc;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+#download-report-button:hover {
+  color: black;
+  box-shadow: 0 0 25px #00ffcc, 0 0 50px #00ffcc;
+  border-color: #00ffcc;
+}
+
+#download-report-button:hover::before {
+  width: 100%;
+}
+
+/* Features Section Layout */
+.features-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+  margin: 1.5rem auto;
+  flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 204, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 900px;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
+}
+
+/* Checklist */
+.checklist-container {
+  flex: 1;
+  min-width: 300px;
+}
+
+.checklist-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checklist-container li {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+  position: relative;
+  /* For tooltip positioning */
+}
+
+/* Tooltip Styles */
+.checklist-container li[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 105%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid #00ffcc;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  white-space: nowrap;
+  z-index: 100;
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
+  pointer-events: none;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.checklist-container li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Hide default checkbox */
+.checklist-container input[type="checkbox"] {
+  display: none;
+}
+
+/* Status Indicators */
+.checklist-container li.safe {
+  color: #00ffcc;
+  border-left-color: #00ffcc;
+  background: rgba(0, 255, 204, 0.1);
+  text-shadow: 0 0 5px rgba(0, 255, 204, 0.5);
+}
+
+.checklist-container li.vulnerable {
+  color: #ff3366;
+  border-left-color: #ff3366;
+  background: rgba(255, 51, 102, 0.1);
+  text-shadow: 0 0 5px rgba(255, 51, 102, 0.5);
+}
+
+.checklist-container li.safe::after {
+  content: 'SECURE';
+  margin-left: auto;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #00ffcc;
+}
+
+.checklist-container li.vulnerable::after {
+  content: 'VULNERABLE';
+  margin-left: auto;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #ff3366;
+}
+
+
+
+/* Loading Text */
+.loading-text {
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  color: #00ffcc;
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}

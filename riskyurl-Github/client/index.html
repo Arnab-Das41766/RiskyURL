@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Security-Checker</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+  <main>
+    <!-- Background Video -->
+    <section class="hero">
+      <video autoplay loop muted plays-inline class="backvideo">
+        <source src="WhatsApp Video 2025-04-13 at 15.35.12_65610455.mp4" />
+      </video>
+    </section>
+
+    <!-- Info Section -->
+    <div class="info-section">
+      <h2>What does this <span class="highlighted-text">"site"</span> do?</h2>
+      <p><span id="typed-text"></span></p>
+    </div>
+
+    <!-- Title and Input -->
+    <div class="container">
+      <h1>RiskyURL</h1>
+      <div class="input-wrapper">
+        <input required id="url-input" type="url" name="url" placeholder="https://example.com" autocomplete="off" />
+        <button id="check-button">Check</button>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <!-- Features Section -->
+    <div class="container">
+      <div class="features-section">
+        <div class="checklist-container">
+          <p id="loading-text" class="loading-text"></p>
+          <ul id="checklist">
+            <li data-tooltip="Forces DB errors to reveal structure"><input type="checkbox" disabled> ERROR-BASED SQLI
+            </li>
+            <li data-tooltip="Infers data by asking True/False questions"><input type="checkbox" disabled> BOOLEAN-BASED
+              SQLI</li>
+            <li data-tooltip="Delays response to confirm queries"><input type="checkbox" disabled> TIME-BASED SQLI</li>
+            <li data-tooltip="Combines results to steal data"><input type="checkbox" disabled> UNION-BASED SQLI</li>
+            <li data-tooltip="Malicious script reflected off web server"><input type="checkbox" disabled> REFLECTED XSS
+            </li>
+            <li data-tooltip="Malicious script stored on target server"><input type="checkbox" disabled> STORED XSS</li>
+            <li data-tooltip="Payload executed in browser DOM"><input type="checkbox" disabled> DOM-BASED XSS</li>
+            <li data-tooltip="Forces user to execute unwanted actions"><input type="checkbox" disabled> CSRF</li>
+            <li data-tooltip="Checks for missing security headers"><input type="checkbox" disabled> HEADER-CHECK</li>
+            <li data-tooltip="Validates SSL certificate and configuration"><input type="checkbox" disabled> SSL/TLS
+              CHECK</li>
+            <li data-tooltip="Scans for hidden files and directories"><input type="checkbox" disabled> DIRECTORY FUZZING
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Report Download Button -->
+      <div id="report-download-wrapper">
+        <button id="download-report-button" onclick="window.open('http://localhost:5000/download_report')">
+          Download Report
+        </button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+
+  <!-- Footer -->
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="footer-content">
+      <p>&copy; 2025 RiskyURL. All rights reserved.</p>
+      <div class="footer-links">
+        <span class="badge">Open Source Project</span>
+        <a href="https://github.com/your-username/kou" target="_blank" class="github-link">
+          <i class="fab fa-github"></i> View on GitHub
+        </a>
+        <span class="separator">|</span>
+        <a href="#" class="license-link">MIT License</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
